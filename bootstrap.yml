@@ -1,0 +1,26 @@
+---
+# Simple playbook to perform bootstrap operations needed for
+# ansible to easily manage the machine
+# - Will also convert this playbook into a role called
+#   bootstrap
+- name: Early deployment tasks for ansible management
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Verify the ansible user exists
+    ansible.builtin.user:
+      name: ansible
+
+  - name: Push bootstrap_sshkeys to ansible user
+    ansible.posix.authorized_key:
+      user: ansible
+      state: present
+      key: "{{ item['key'] }}"
+    with_items: "{{ bootstrap_sshkeys }}"
+
+  - name: Verify ansible user has full passwordless sudo access
+    ansible.builtin.copy:
+      dest: /etc/sudoers.d/ansible
+      content: "ansible ALL=(ALL) NOPASSWD: ALL"
+
