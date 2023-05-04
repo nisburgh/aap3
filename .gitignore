@@ -1,6 +1,10 @@
 artifacts/
 collections/*
 !collections/README.md
+roles/*
+!roles/README.md
+!roles/bootstrap
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

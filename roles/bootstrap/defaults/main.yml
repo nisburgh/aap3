@@ -1,0 +1,13 @@
+---
+# defaults file for roles/bootstrap
+
+# This variable stores all of the keys which should be deployed to
+# the ansible user account on the bootstrapped node
+# It is a list of dictionaries, each dictionary has two keys:
+#  description: Human readable description of the key
+#  key: The actual public ssh key to place in authorized_keys
+bootstrap_sshkeys:
+  - description: First key description
+    key: "ssh-rsa ThisIsTheKeyData..."
+
+

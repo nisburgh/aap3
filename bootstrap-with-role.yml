@@ -1,0 +1,11 @@
+---
+# Simple playbook using a role to perform bootstrap
+# operations needed for ansible to easily manage the machine
+- name: Early deployment tasks for ansible management
+  hosts: all
+  become: true
+
+  tasks:
+  - ansible.builtin.include_role:
+      name: bootstrap
+
