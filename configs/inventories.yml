@@ -1,0 +1,9 @@
+controller_inventories:
+  - name: aap3_automated
+    organization: Default
+controller_inventory_sources:
+  - name: aap3 repo inventory source_automated
+    inventory: aap3_automated
+    source: scm
+    source_path: inventory
+    source_project: aap3_automated

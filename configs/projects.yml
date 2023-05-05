@@ -1,0 +1,6 @@
+controller_projects:
+  - name: aap3_automated
+    organization: Default
+    scm_type: git
+    scm_url: https://github.com/nisburgh/aap3.git
+    update: true

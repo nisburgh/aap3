@@ -1,0 +1,8 @@
+controller_templates:
+  - name: Bootstrap_automated
+    inventory: aap3_automated
+    project: aap3_automated
+    playbook: bootstrap-with-role.yml
+    credentials:
+      - student ssh password prompt_automated
+
