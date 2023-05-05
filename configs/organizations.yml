@@ -1,0 +1,6 @@
+controller_organizations:
+ - name: Test Org 1
+ - name: Test Org 2
+ - name: Default
+   description: This is the default organization that the installer added
+
